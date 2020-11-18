@@ -10,7 +10,7 @@ mkdir -p /work/build || exit 1
 cd /work/build || exit 1
 
 if [ ! -e resynthesizer ]; then
-	(git clone https://github.com/bootchk/resynthesizer.git) || exit 1
+	(git clone --branch falseColorMatch https://github.com/bootchk/resynthesizer.git) || exit 1
 fi
 
 (cd /work/build/resynthesizer && ./autogen.sh --prefix=/usr/local && make -j 2 install) || exit 1
